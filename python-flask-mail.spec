@@ -11,7 +11,7 @@ Summary(pl.UTF-8):	Prosty interfejs do konfiguracji SMTP w aplikacjach Flask i d
 # Name must match the python module/package name (as in 'import' statement)
 Name:		python-%{module}
 Version:	0.9.1
-Release:	3
+Release:	4
 License:	BSD
 Group:		Libraries/Python
 Source0:	https://pypi.python.org/packages/source/F/Flask-Mail/Flask-Mail-%{version}.tar.gz
@@ -27,17 +27,20 @@ BuildRequires:	rpmbuild(macros) >= 1.219
 BuildRequires:	python-blinker
 BuildRequires:	python-flask
 BuildRequires:	python-setuptools > 7.0
+BuildRequires:	python-speaklater
 %endif
 %if %{with python3}
 BuildRequires:	python3-blinker
 BuildRequires:	python3-flask
 BuildRequires:	python3-modules
 BuildRequires:	python3-setuptools > 7.0
+BuildRequires:	python3-speaklater
 %endif
 # Below Rs only work for main package (python2)
 Requires:	python-blinker
 Requires:	python-flask
 Requires:	python-modules
+Requires:	python-speaklater
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -53,6 +56,7 @@ Group:		Libraries/Python
 Requires:	python3-blinker
 Requires:	python3-flask
 Requires:	python3-modules
+Requires:	python3-speaklater
 
 %description -n python3-%{module}
 The Flask-Mail extension provides a simple interface to set up SMTP
