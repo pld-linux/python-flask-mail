@@ -5,6 +5,11 @@
 %bcond_without	python2 # CPython 2.x module
 %bcond_without	python3 # CPython 3.x module
 
+%if %{without python2}
+# docs built using python2, this simplifies BR just to disable doc if built without py2
+%undefine	with_doc
+%endif
+
 %define 	module	flask-mail
 Summary:	Flask-Mail adds SMTP mail sending to your Flask applications
 Summary(pl.UTF-8):	Prosty interfejs do konfiguracji SMTP w aplikacjach Flask i do wysyałnia e-mail z widoków i skryptów
