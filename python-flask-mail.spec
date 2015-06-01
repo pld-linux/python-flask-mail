@@ -11,7 +11,7 @@ Summary(pl.UTF-8):	Prosty interfejs do konfiguracji SMTP w aplikacjach Flask i d
 # Name must match the python module/package name (as in 'import' statement)
 Name:		python-%{module}
 Version:	0.9.1
-Release:	1
+Release:	2
 License:	BSD
 Group:		Libraries/Python
 Source0:	https://pypi.python.org/packages/source/F/Flask-Mail/Flask-Mail-%{version}.tar.gz
@@ -24,13 +24,16 @@ BuildRequires:	rpmbuild(macros) >= 1.219
 #BuildRequires:	sed >= 4.0
 # when python3 present
 %if %{with python2}
+BuildRequires:	python-blinker
 BuildRequires:	python-setuptools > 7.0
 %endif
 %if %{with python3}
+BuildRequires:	python3-blinker
 BuildRequires:	python3-modules
 BuildRequires:	python3-setuptools > 7.0
 %endif
 # Below Rs only work for main package (python2)
+Requires:	python-blinker
 Requires:	python-modules
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -44,6 +47,7 @@ SMTP w aplikacji Flask i do wysyłanie wiadomości z widoków i skryptów.
 Summary:	-
 Summary(pl.UTF-8):	-
 Group:		Libraries/Python
+Requires:	python3-blinker
 Requires:	python3-modules
 
 %description -n python3-%{module}
