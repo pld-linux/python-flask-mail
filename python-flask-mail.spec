@@ -22,7 +22,7 @@ Source0:	https://pypi.python.org/packages/source/F/Flask-Mail/Flask-Mail-%{versi
 # Source0-md5:	04b35a42a44ec7aa724ec8ce55e2e08e
 URL:		http://pythonhosted.org/Flask-Mail/
 BuildRequires:	rpm-pythonprov
-BuildRequires:	rpmbuild(macros) >= 1.219
+BuildRequires:	rpmbuild(macros) >= 1.710
 %if %{with python2}
 BuildRequires:	python-blinker
 BuildRequires:	python-flask
