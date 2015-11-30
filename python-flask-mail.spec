@@ -15,7 +15,7 @@ Summary:	Flask-Mail adds SMTP mail sending to your Flask applications
 Summary(pl.UTF-8):	Prosty interfejs do konfiguracji SMTP w aplikacjach Flask i do wysyałnia e-mail z widoków i skryptów
 Name:		python-%{module}
 Version:	0.9.1
-Release:	6
+Release:	7
 License:	BSD
 Group:		Libraries/Python
 Source0:	https://pypi.python.org/packages/source/F/Flask-Mail/Flask-Mail-%{version}.tar.gz
